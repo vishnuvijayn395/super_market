@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Create Account | Kakde Supermarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-brand">
+      <a class="back-home" href="index.html">← Back to supermarket</a>
+      <div class="auth-brand-copy"><div class="auth-logo">KAKDE <span>SUPERMARKET</span></div><h1>Your shopping, remembered.</h1><p>Create a customer account for a faster and more personal supermarket experience.</p></div>
+      <div class="auth-points"><span>✓ Safe registration</span><span>✓ Customer access</span><span>✓ Quick sign in</span></div>
+    </section>
+    <section class="auth-panel">
+      <div class="auth-card">
+        <h2>Create account</h2><p class="auth-subtitle">Registration creates a normal customer account.</p>
+        <div class="auth-message" id="authMessage" role="alert"></div>
+        <form class="auth-form" id="registerForm">
+          <label for="name">Full name</label><input id="name" name="name" autocomplete="name" minlength="2" required placeholder="Your full name">
+          <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <label for="password">Password</label>
+          <div class="password-wrap"><input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required placeholder="8+ characters"><button class="password-toggle" type="button" data-toggle-password>Show</button></div>
+          <label for="confirmPassword">Confirm password</label><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required placeholder="Repeat your password">
+          <button class="auth-button" type="submit">Create customer account</button>
+        </form>
+        <p class="auth-switch">Already registered? <a href="login.html">Sign in</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>

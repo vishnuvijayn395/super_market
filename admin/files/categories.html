@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categories | Kakde Supermarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="categories.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="pill">📍 Kakde Supermarket, Tumchya Gharajavalcha Vishwas</span>
+      <span class="muted">🕒 8:00 AM - 10:00 PM (All Days)</span>
+    </div>
+  </div>
+  <header class="header categories-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Kakde Supermarket home">
+        <span class="logo__mark">🛒</span>
+        <span class="logo__text"><span class="logo__name">KAKDE</span><span class="logo__name2">SUPERMARKET</span></span>
+      </a>
+      <form class="search" id="categorySearch">
+        <input id="categorySearchInput" type="search" placeholder="Search products in all categories..." />
+        <button class="btn btn--yellow" type="submit">Search</button>
+      </form>
+      <nav class="header__actions">
+        <a class="action" href="index.html">← Home</a>
+        <a class="action" id="accountLink" href="login.html">👤 Login</a>
+        <a class="action" id="registerLink" href="register.html">Register</a>
+        <span class="action action--cart">🧺 My Cart <span class="badge" id="categoryCartCount">0</span></span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="categories-hero">
+      <div class="container">
+        <p class="kicker">Everything you need, neatly sorted</p>
+        <h1>Shop All Categories</h1>
+        <p>Choose a category or search across our products.</p>
+        <div class="category-tabs" id="categoryTabs" aria-label="Product categories"></div>
+      </div>
+    </section>
+    <div class="container categories-content" id="categoriesContent"></div>
+    <div class="container category-empty" id="categoryEmpty" hidden>
+      <span>🔎</span><h2>No products found</h2>
+      <p>Try another product name or choose a different category.</p>
+      <button class="btn btn--yellow" id="clearCategorySearch">Show all products</button>
+    </div>
+  </main>
+  <footer class="footer category-footer">
+    <div class="container footer__grid">
+      <div><h3>Kakde Supermarket</h3><p class="muted">Quality groceries, fair prices, and friendly service.</p></div>
+      <div><h3>Quick Links</h3><a class="flink" href="index.html">Home</a><a class="flink" href="index.html#offers">Today's Offers</a></div>
+    </div>
+  </footer>
+  <script src="categories.js"></script>
+  <script src="session-ui.js"></script>
+</body>
+</html>

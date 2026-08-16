@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kakde Supermarket | Fresh Groceries & Daily Essentials</title>
+  <meta name="description" content="Shop fresh groceries, milk & dairy, staples, snacks and everyday household essentials at Kakde Supermarket with fast local home delivery." />
+  
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Topbar Ticker -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="pill">
+          <img src="assets/icons/map-pin.svg" class="icon-svg" alt="" /> Kakde Supermarket, Tumchya Gharajavalcha Vishwas
+        </span>
+        <span>
+          <img src="assets/icons/truck.svg" class="icon-svg" alt="" /> Express 30-Min Local Home Delivery Available
+        </span>
+      </div>
+      <div class="topbar__right">
+        <span>
+          <img src="assets/icons/clock.svg" class="icon-svg" alt="" /> Open 8:00 AM - 10:00 PM (All Days)
+        </span>
+        <a href="https://wa.me/919730708582" target="_blank" style="color: #34d399; font-weight: 700; display: inline-flex; align-items: center; gap: 0.3rem;">
+          <img src="assets/icons/message-circle.svg" class="icon-svg" style="filter: brightness(0) invert(1);" alt="" /> WhatsApp: +91 9730708582
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <!-- Left Brand Logo -->
+      <a class="logo" href="index.html" aria-label="Kakde Supermarket Home">
+        <img src="assets/logo.png" class="logo__img" alt="Kakde Supermarket Logo" />
+        <span class="logo__text">
+          <span class="logo__name">KAKDE</span>
+          <span class="logo__name2">SUPERMARKET</span>
+        </span>
+      </a>
+
+      <!-- Search Bar -->
+      <form class="search" id="searchForm" onsubmit="return false;">
+        <input id="searchInput" type="search" placeholder="Search groceries, milk, atta, oil, tea, snacks..." aria-label="Search products" />
+        <button type="submit" id="searchBtn" aria-label="Search">
+          <img src="assets/icons/search.svg" class="icon-svg" alt="" />
+        </button>
+      </form>
+
+      <!-- Header Actions & Top-Right Gold Logo -->
+      <nav class="header__actions">
+        <a class="logo-top-right" href="index.html" title="Kakde Supermarket Gold Emblem">
+          <img src="assets/logo.png" alt="Gold Logo" />
+          <span>KAKDE</span>
+        </a>
+
+        <div id="authAccountNav">
+          <a class="btn-action" href="login.html" id="loginBtn">
+            <img src="assets/icons/user.svg" class="icon-svg" alt="" /> Login / Register
+          </a>
+        </div>
+
+        <a class="btn-action btn-admin-link" href="admin.html" title="Store Admin Portal">
+          <img src="assets/icons/wrench.svg" class="icon-svg" alt="" /> Admin
+        </a>
+
+        <button class="btn-action btn-cart" id="openCartBtn" type="button" aria-label="View Shopping Cart">
+          <img src="assets/icons/shopping-bag.svg" class="icon-svg" alt="" /> My Cart <span class="badge" id="cartCountBadge">0</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Category Sub-Nav -->
+    <div class="nav">
+      <div class="container nav__inner">
+        <a class="navlink is-active" href="#" data-hash="#">
+          <img src="assets/icons/home.svg" class="icon-svg" alt="" /> Home
+        </a>
+        <a class="navlink" href="#categories" data-hash="#categories">
+          <img src="assets/icons/boxes.svg" class="icon-svg" alt="" /> Categories
+        </a>
+        <a class="navlink" href="#products" data-hash="#products">
+          <img src="assets/icons/package.svg" class="icon-svg" alt="" /> All Products
+        </a>
+        <a class="navlink" href="#offers" data-hash="#offers">
+          <img src="assets/icons/flame.svg" class="icon-svg" alt="" /> Daily Offers
+        </a>
+        <a class="navlink" href="categories.html">
+          <img src="assets/icons/tag.svg" class="icon-svg" alt="" /> Browse Catalog
+        </a>
+        <a class="navlink" href="#about" data-hash="#about">
+          <img src="assets/icons/info.svg" class="icon-svg" alt="" /> About Us
+        </a>
+        <a class="navlink" href="#contact" data-hash="#contact">
+          <img src="assets/icons/phone.svg" class="icon-svg" alt="" /> Contact Store
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="hero__kicker">
+          <img src="assets/icons/star.svg" class="icon-svg icon-svg-amber" alt="" /> Best Quality | Everyday Lowest Prices
+        </p>
+        <h1 class="hero__title">
+          Tumchya Gharajyavlcha <br/>
+          <span>Vishwas</span>
+        </h1>
+        <p class="hero__sub">
+          Fresh groceries, dairy products, kitchen staples & personal care items delivered directly to your doorstep.
+        </p>
+        <div class="hero__cta">
+          <a class="btn-primary" href="#products">
+            <img src="assets/icons/shopping-cart.svg" class="icon-svg" alt="" /> Shop Groceries
+          </a>
+          <a class="btn-secondary" style="background: #25d366; border-color: #25d366; color: white;" href="https://wa.me/919730708582?text=Hello%20Kakde%20Supermarket,%20I%20want%20to%20place%20an%20order!" target="_blank" rel="noreferrer">
+            <img src="assets/icons/message-circle.svg" class="icon-svg" style="filter: brightness(0) invert(1);" alt="" /> Order via WhatsApp (9730708582)
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__banner" role="img" aria-label="Supermarket banner showcasing fresh products"></div>
+    </div>
+
+    <!-- Trust Highlights -->
+    <div class="container trustbar">
+      <div class="trustcard">
+        <img src="assets/icons/shield-check.svg" class="icon-svg icon-svg-green" alt="" /> 100% Original Quality
+      </div>
+      <div class="trustcard">
+        <img src="assets/icons/tag.svg" class="icon-svg icon-svg-amber" alt="" /> Best Discounted Prices
+      </div>
+      <div class="trustcard">
+        <img src="assets/icons/clock.svg" class="icon-svg" alt="" /> Fast Billing & Packing
+      </div>
+      <div class="trustcard">
+        <img src="assets/icons/truck.svg" class="icon-svg" alt="" /> Doorstep Home Delivery
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Explorer -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>Shop by Category</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Select a category to filter items instantly</p>
+        </div>
+      </div>
+
+      <div class="category-pills" id="categoryPills">
+        <button class="category-pill active" data-category="ALL">
+          <img src="assets/icons/sparkles.svg" class="icon-svg" alt="" /> All Products
+        </button>
+        <button class="category-pill" data-category="Milk & Dairy">
+          <img src="assets/icons/milk.svg" class="icon-svg" alt="" /> Milk & Dairy
+        </button>
+        <button class="category-pill" data-category="Staples & Grains">
+          <img src="assets/icons/package.svg" class="icon-svg" alt="" /> Staples & Grains
+        </button>
+        <button class="category-pill" data-category="Cooking Essentials">
+          <img src="assets/icons/droplet.svg" class="icon-svg" alt="" /> Cooking Essentials
+        </button>
+        <button class="category-pill" data-category="Beverages">
+          <img src="assets/icons/coffee.svg" class="icon-svg" alt="" /> Beverages
+        </button>
+        <button class="category-pill" data-category="Snacks & Munchies">
+          <img src="assets/icons/cookie.svg" class="icon-svg" alt="" /> Snacks & Munchies
+        </button>
+        <button class="category-pill" data-category="Cleaning & Household">
+          <img src="assets/icons/brush.svg" class="icon-svg" alt="" /> Household & Cleaning
+        </button>
+        <button class="category-pill" data-category="Personal Care">
+          <img src="assets/icons/user.svg" class="icon-svg" alt="" /> Personal Care
+        </button>
+        <button class="category-pill" data-category="Fruits & Vegetables">
+          <img src="assets/icons/apple.svg" class="icon-svg" alt="" /> Fruits & Vegetables
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2>Featured Products</h2>
+          <p id="productCountSub" style="color: var(--text-muted); font-size: 0.95rem;">Showing fresh items</p>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Offers Slider -->
+  <section class="offers-section" id="offers">
+    <div class="container">
+      <div class="section__head">
+        <h2>
+          <img src="assets/icons/flame.svg" class="icon-svg icon-svg-amber" alt="" /> Today's Special Deals & Coupons
+        </h2>
+      </div>
+
+      <div class="offers-wrap">
+        <button class="offer-nav offer-prev" id="offerPrevBtn" aria-label="Previous Offer">‹</button>
+
+        <div class="offers-track" id="offersTrack">
+          <div class="offer-card offer-bg-1">
+            <span class="offer-badge">Today Only</span>
+            <h3>Milk & Dairy Savings Deal</h3>
+            <p>Buy any 2 Amul Milk pouches & get extra 10% instant discount!</p>
+            <div><strong>Use Code: MILK10 at checkout</strong></div>
+          </div>
+
+          <div class="offer-card offer-bg-2">
+            <span class="offer-badge">Mega Offer</span>
+            <h3>Atta & Staples Combo</h3>
+            <p>Save up to ₹50 on 5Kg Aashirvaad Chakki Fresh Atta bags.</p>
+            <div><strong>Special Price ₹239 Everyday</strong></div>
+          </div>
+
+          <div class="offer-card offer-bg-3">
+            <span class="offer-badge">Free Delivery</span>
+            <h3>Orders Above ₹499</h3>
+            <p>Get instant FREE home delivery on all neighborhood grocery orders.</p>
+            <div><strong>No coupon code required</strong></div>
+          </div>
+        </div>
+
+        <button class="offer-nav offer-next" id="offerNextBtn" aria-label="Next Offer">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Contact Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head">
+        <h2>About Kakde Supermarket</h2>
+      </div>
+      <div style="background: #ffffff; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border); line-height: 1.7; color: var(--text-muted);">
+        <p style="margin-bottom: 1rem;">
+          <strong style="color: var(--dark-slate);">Kakde Supermarket</strong> is your trusted neighborhood grocery superstore. We take pride in providing 100% fresh, hygienic, and genuine brand products ranging from daily dairy milk to premium pulses, spices, packaged snacks, household cleaning items, and personal care.
+        </p>
+        <p>
+          Visit our local store or place your order online for fast, reliable doorstep delivery with flexible payment options including cash on delivery and instant WhatsApp orders.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer__header">
+        <h3>
+          <img src="assets/icons/shopping-bag.svg" class="icon-svg" alt="" /> Your Shopping Cart
+        </h3>
+        <button class="cart-drawer__close" id="closeCartBtn" aria-label="Close Cart">
+          <img src="assets/icons/x.svg" class="icon-svg" alt="" />
+        </button>
+      </div>
+
+      <div class="cart-drawer__body" id="cartItemsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <div class="cart-drawer__footer">
+        <div class="cart-summary__row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>Delivery Fee</span>
+          <span id="cartDelivery">₹0 (Free)</span>
+        </div>
+        <div class="cart-summary__row total">
+          <span>Total Amount</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+
+        <button class="btn-checkout-wa" id="whatsappCheckoutBtn">
+          <img src="assets/icons/message-circle.svg" class="icon-svg" style="filter: brightness(0) invert(1);" alt="" /> Send Order to WhatsApp (+91 9730708582)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail Quick-View Modal -->
+  <div class="modal-backdrop" id="productModalBackdrop">
+    <div class="modal-content" id="productModal">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close details">
+        <img src="assets/icons/x.svg" class="icon-svg" alt="" />
+      </button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img id="modalImg" src="" alt="Product Image" />
+        </div>
+        <div class="modal-info">
+          <span id="modalCategory" class="product-card__category">Category</span>
+          <h2 id="modalTitle">Product Title</h2>
+          <p id="modalDesc" class="modal-desc">Product description details...</p>
+          <div style="margin-bottom: 1.5rem; display: flex; align-items: baseline; gap: 0.75rem;">
+            <span id="modalPrice" class="product-card__price" style="font-size: 1.5rem;">₹0</span>
+            <span id="modalMrp" class="product-card__mrp" style="font-size: 1rem;">₹0</span>
+            <span id="modalDiscount" class="product-card__badge" style="position: static;">0% OFF</span>
+          </div>
+          <div style="margin-top: auto; display: flex; gap: 1rem;">
+            <button class="btn-primary" id="modalAddToCartBtn" style="flex: 1; justify-content: center;">
+              <img src="assets/icons/shopping-bag.svg" class="icon-svg" alt="" /> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+          <img src="assets/logo.png" style="width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid #f59e0b;" alt="Gold Logo" />
+          <h3 style="margin-bottom: 0;">Kakde Supermarket</h3>
+        </div>
+        <p style="line-height: 1.6; font-size: 0.9rem;">
+          Tumchya Gharajavalcha Vishwas. Quality products, fair prices, and exceptional customer service every day.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Navigation</h3>
+        <a class="flink" href="#">Home</a>
+        <a class="flink" href="#categories">Shop by Category</a>
+        <a class="flink" href="#offers">Daily Deals & Offers</a>
+        <a class="flink" href="categories.html">Browse Full Catalog</a>
+      </div>
+
+      <div>
+        <h3>Customer Support</h3>
+        <a class="flink" href="#about">About Our Store</a>
+        <a class="flink" href="#contact">Store Location</a>
+        <a class="flink" href="login.html">Customer Login</a>
+        <a class="flink" href="admin.html">Admin Portal</a>
+      </div>
+
+      <div>
+        <h3>Store Contact</h3>
+        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+          <img src="assets/icons/map-pin.svg" class="icon-svg" alt="" /> Kakde Supermarket Main Road
+        </p>
+        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+          <img src="assets/icons/clock.svg" class="icon-svg" alt="" /> 8:00 AM - 10:00 PM (Daily)
+        </p>
+        <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+          <a href="https://wa.me/919730708582" target="_blank" style="color: #25d366; font-weight: 700; text-decoration: underline;">
+            <img src="assets/icons/message-circle.svg" class="icon-svg" style="filter: brightness(0) invert(1);" alt="" /> WhatsApp: +91 9730708582
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© 2026 Kakde Supermarket. All Rights Reserved.</span>
+      <span>Designed & Maintained for Customer Excellence</span>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>

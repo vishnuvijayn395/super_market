@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Browse Categories | Kakde Supermarket</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="pill">
+        <img src="assets/icons/map-pin.svg" class="icon-svg" alt="" /> Kakde Supermarket, Tumchya Gharajavalcha Vishwas
+      </span>
+      <span>
+        <img src="assets/icons/clock.svg" class="icon-svg" alt="" /> Open 8:00 AM - 10:00 PM (All Days)
+      </span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.png" class="logo__img" alt="Kakde Supermarket Logo" />
+        <span class="logo__text"><span class="logo__name">KAKDE</span><span class="logo__name2">SUPERMARKET</span></span>
+      </a>
+
+      <form class="search" id="catSearchForm" onsubmit="return false;">
+        <input id="catSearchInput" type="search" placeholder="Search catalog items..." />
+        <button type="submit">
+          <img src="assets/icons/search.svg" class="icon-svg" alt="" />
+        </button>
+      </form>
+
+      <nav class="header__actions">
+        <a class="logo-top-right" href="index.html">
+          <img src="assets/logo.png" alt="Gold Logo" />
+          <span>KAKDE</span>
+        </a>
+        <a class="btn-action" href="index.html">
+          <img src="assets/icons/home.svg" class="icon-svg" alt="" /> Home
+        </a>
+        <a class="btn-action btn-cart" href="index.html#products">
+          <img src="assets/icons/shopping-bag.svg" class="icon-svg" alt="" /> Store
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <div class="section__head">
+      <div>
+        <h2>All Store Categories</h2>
+        <p style="color: var(--text-muted);">Browse groceries and household items sorted by department</p>
+      </div>
+    </div>
+
+    <div class="category-pills" id="catalogCategoryPills" style="margin-bottom: 2rem;">
+      <!-- Populated dynamically by categories.js -->
+    </div>
+
+    <div class="product-grid" id="catalogProductGrid">
+      <!-- Populated dynamically -->
+    </div>
+  </main>
+
+  <script src="categories.js"></script>
+</body>
+</html>

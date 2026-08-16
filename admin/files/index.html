@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kakde Supermarket | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="pill">📍 Kakde Supermarket, Tumchya Gharajavalcha Vishwas</span>
+        <span class="muted">⭐ Best quality products at affordable prices</span>
+      </div>
+      <div class="topbar__right">
+        <span class="muted">🕒 8:00 AM - 10:00 PM (All Days)</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#">
+        <span class="logo__mark">🛒</span>
+        <span class="logo__text">
+          <span class="logo__name">KAKDE</span>
+          <span class="logo__name2">SUPERMARKET</span>
+        </span>
+      </a>
+
+      <form class="search" onsubmit="return false;">
+        <input id="searchInput" type="search" placeholder="🔍 Search for groceries, brands, products..." />
+        <button class="btn btn--yellow" type="button" id="searchBtn">Search 🔍</button>
+      </form>
+
+      <nav class="header__actions">
+        <a class="action" id="accountLink" href="login.html">👤 Login</a>
+        <a class="action" id="registerLink" href="register.html">Register ✨</a>
+        <a class="action action--cart" href="#">
+          🧺 My Cart <span class="badge" id="cartCount">0</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="nav">
+      <div class="container nav__inner">
+        <button class="btn btn--yellow btn--menu" id="allCatBtn">☰ All Categories</button>
+        <a class="navlink is-active" href="#">🏠 Home</a>
+        <a class="navlink" href="categories.html">📂 Categories</a>
+        <a class="navlink" href="#offers">🏷️ Offers</a>
+        <a class="navlink" href="#bestsellers">🏆 Best Sellers</a>
+        <a class="navlink" href="#about">ℹ️ About Us</a>
+        <a class="navlink" href="#contact">📞 Contact Us</a>
+      </div>
+
+      <div class="dropdown" id="catDropdown" hidden>
+        <a href="categories.html#milk-dairy">Milk & Dairy</a>
+        <a href="categories.html#bread-bakery">Bread & Bakery</a>
+        <a href="categories.html#staples-grains">Staples & Grains</a>
+        <a href="categories.html#snacks">Snacks & Munchies</a>
+        <a href="categories.html#beverages">Beverages</a>
+        <a href="categories.html#personal-care">Personal Care</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="kicker">⭐ Best Quality Products | Affordable Prices ⭐</p>
+        <h1>Tumchya Gharajyavlcha <span class="accent">Vishwas</span></h1>
+        <p class="hero__sub">⚡ Fast Billing | 💥 Great Offers | 🚚 Home Delivery Available</p>
+        <div class="hero__buttons">
+          <a class="btn btn--yellow" href="#bestsellers">Shop Now 🛒</a>
+          <a class="btn btn--dark" href="#contact">Visit Our Store 🏪</a>
+        </div>
+      </div>
+      <div class="hero__banner"></div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="container section__head">
+      <h2>🏷️ Shop by Category</h2>
+    </div>
+    <div class="container grid grid--6">
+      <a class="card card--cat" href="categories.html#milk-dairy"><div class="thumb">🥛</div><div class="card__title">Milk & Dairy</div></a>
+      <a class="card card--cat" href="categories.html#bread-bakery"><div class="thumb">🥖</div><div class="card__title">Bread & Bakery</div></a>
+      <a class="card card--cat" href="categories.html#staples-grains"><div class="thumb">🌾</div><div class="card__title">Staples & Grains</div></a>
+      <a class="card card--cat" href="categories.html#snacks"><div class="thumb">🍪</div><div class="card__title">Snacks</div></a>
+      <a class="card card--cat" href="categories.html#beverages"><div class="thumb">🥤</div><div class="card__title">Beverages</div></a>
+      <a class="card card--cat" href="categories.html#personal-care"><div class="thumb">🧴</div><div class="card__title">Personal Care</div></a>
+    </div>
+  </section>
+
+  <section class="section" id="bestsellers">
+    <div class="container section__head">
+      <h2>🏆 Best Sellers</h2>
+    </div>
+    <div class="container grid grid--6" id="productGrid"></div>
+  </section>
+
+  <section class="section offers-inline-section" id="offers">
+    <div class="container">
+      <div class="offers-inline-head">
+        <h2>🔥 Daily Offers</h2>
+        <p>🔥 Fresh deals updated every day</p>
+      </div>
+
+      <div class="offers-inline-wrap">
+        <button class="offers-nav offers-prev" id="offersPrev">‹</button>
+        <div class="offers-viewport">
+          <div class="offers-track" id="offersTrack">
+            <article class="offer-card offer-bg-1">
+              <span class="offer-badge">Today</span>
+              <h4>Milk Combo Deal</h4>
+              <p>Buy 2 Amul Milk (1L) and get ₹10 OFF</p>
+              <strong>Use code: MILK10</strong>
+            </article>
+
+            <article class="offer-card offer-bg-2">
+              <span class="offer-badge">Limited</span>
+              <h4>Atta Mega Save</h4>
+              <p>Aashirvaad Atta 5kg at best price + free delivery</p>
+              <strong>Save up to ₹40</strong>
+            </article>
+
+            <article class="offer-card offer-bg-custom">
+              <span class="offer-badge">Featured</span>
+              <h4>Kakde Supermarket Special</h4>
+              <p>Best quality groceries with exciting daily savings</p>
+              <strong>Visit Store / Order on WhatsApp</strong>
+            </article>
+          </div>
+        </div>
+        <button class="offers-nav offers-next" id="offersNext">›</button>
+      </div>
+
+      <div class="offers-dots" id="offersDots"></div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div id="about">
+        <h3>🏪 About Kakde Supermarket</h3>
+        <p class="muted">💖 Your trusted neighborhood store with top quality and affordable prices.</p>
+      </div>
+      <div>
+        <h3>🔗 Quick Links</h3>
+        <a class="flink" href="#categories">📂 Categories</a>
+        <a class="flink" href="#offers">🏷️ Offers</a>
+        <a class="flink" href="#bestsellers">🏆 Best Sellers</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="session-ui.js"></script>
+</body>
+</html>

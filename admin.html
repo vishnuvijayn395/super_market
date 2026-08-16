@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard | Kakde Supermarket</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+
+  <!-- Admin Header -->
+  <header class="admin-header">
+    <div class="container admin-header__inner">
+      <div class="admin-title">
+        <img src="assets/icons/wrench.svg" class="icon-svg" style="width: 28px; height: 28px; filter: brightness(0) invert(1);" alt="" />
+        <div>
+          <h1>Kakde Supermarket Admin</h1>
+          <p style="font-size: 0.85rem; color: var(--admin-muted);">Product Catalog & Inventory Control Center</p>
+        </div>
+      </div>
+
+      <div class="admin-nav-links">
+        <span id="adminSessionName" style="font-size: 0.9rem; color: var(--admin-accent); font-weight: 600;">Checking access...</span>
+        <a class="btn-admin btn-admin-outline" href="index.html" target="_blank">
+          <img src="assets/icons/home.svg" class="icon-svg" alt="" /> View Live Store
+        </a>
+        <button class="btn-admin btn-admin-danger" id="logoutBtn" type="button">
+          <img src="assets/icons/log-out.svg" class="icon-svg" alt="" /> Logout
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 1.5rem; padding-bottom: 3rem;">
+
+    <!-- Dashboard KPI Cards -->
+    <section class="admin-stats">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="assets/icons/package.svg" class="icon-svg" alt="" />
+        </div>
+        <div>
+          <div class="stat-val" id="statTotalProducts">0</div>
+          <div class="stat-lbl">Total Store Items</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="assets/icons/octagon-alert.svg" class="icon-svg" alt="" />
+        </div>
+        <div>
+          <div class="stat-val" id="statLowStock">0</div>
+          <div class="stat-lbl">Low Stock Alerts</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="assets/icons/boxes.svg" class="icon-svg" alt="" />
+        </div>
+        <div>
+          <div class="stat-val" id="statCategories">0</div>
+          <div class="stat-lbl">Active Categories</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">
+          <img src="assets/icons/tag.svg" class="icon-svg" alt="" />
+        </div>
+        <div>
+          <div class="stat-val" id="statDiscountItems">0</div>
+          <div class="stat-lbl">Discounted Items</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toolbar -->
+    <section class="admin-toolbar">
+      <div class="admin-search">
+        <input type="search" id="adminSearchInput" placeholder="Search products by name, category, unit..." />
+        <select id="adminCategoryFilter">
+          <option value="ALL">All Categories</option>
+        </select>
+      </div>
+
+      <button class="btn-admin" id="openAddModalBtn" type="button">
+        <img src="assets/icons/plus.svg" class="icon-svg" alt="" />
+        <span>Add New Product</span>
+      </button>
+    </section>
+
+    <!-- Data Table Container -->
+    <section class="table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Selling Price</th>
+            <th>MRP</th>
+            <th>Discount</th>
+            <th>Stock Level</th>
+            <th style="text-align: right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody">
+          <!-- Rendered dynamically by admin.js -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Add / Edit Product Modal -->
+  <div class="admin-modal-backdrop" id="productFormModal">
+    <div class="admin-modal">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h2 id="modalFormTitle" style="font-family: 'Outfit'; font-size: 1.4rem; color: white;">Add New Product</h2>
+        <button id="closeFormModalBtn" type="button" style="background: none; border: none; color: var(--admin-muted); cursor: pointer;">
+          <img src="assets/icons/x.svg" class="icon-svg" style="filter: brightness(0) invert(0.8);" alt="" />
+        </button>
+      </div>
+
+      <form id="productForm">
+        <input type="hidden" id="formProductId" />
+
+        <div class="admin-form-grid">
+          <div class="form-group full">
+            <label for="formName">Product Name *</label>
+            <input type="text" id="formName" required placeholder="e.g. Amul Taaza Toned Milk" />
+          </div>
+
+          <div class="form-group">
+            <label for="formCategory">Category *</label>
+            <input type="text" id="formCategory" required placeholder="e.g. Milk & Dairy" list="categorySuggestions" />
+            <datalist id="categorySuggestions">
+              <option value="Milk & Dairy"></option>
+              <option value="Staples & Grains"></option>
+              <option value="Cooking Essentials"></option>
+              <option value="Beverages"></option>
+              <option value="Snacks & Munchies"></option>
+              <option value="Cleaning & Household"></option>
+              <option value="Personal Care"></option>
+              <option value="Fruits & Vegetables"></option>
+              <option value="Rice, Atta & Dal"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="formUnit">Unit / Weight Meta *</label>
+            <input type="text" id="formUnit" required placeholder="e.g. 1 Ltr, 5 Kg, 500g" />
+          </div>
+
+          <div class="form-group">
+            <label for="formPrice">Selling Price (₹) *</label>
+            <input type="number" id="formPrice" min="1" step="0.5" required placeholder="61" />
+          </div>
+
+          <div class="form-group">
+            <label for="formMrp">MRP (₹) *</label>
+            <input type="number" id="formMrp" min="1" step="0.5" required placeholder="68" />
+          </div>
+
+          <div class="form-group">
+            <label for="formDiscount">Discount (%)</label>
+            <input type="number" id="formDiscount" min="0" max="90" placeholder="Auto-calculated if blank" />
+          </div>
+
+          <div class="form-group">
+            <label for="formStock">Stock Quantity *</label>
+            <input type="number" id="formStock" min="0" required placeholder="50" />
+          </div>
+
+          <div class="form-group full">
+            <label for="formImage">Image URL</label>
+            <input type="url" id="formImage" placeholder="https://images.unsplash.com/..." />
+            <img id="formImagePreview" class="img-preview" src="" alt="Preview" style="display: none;" />
+          </div>
+
+          <div class="form-group full">
+            <label for="formDescription">Product Description</label>
+            <textarea id="formDescription" rows="3" placeholder="Enter brief details about nutrients, usage, or brand..."></textarea>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem;">
+          <button class="btn-admin btn-admin-outline" type="button" id="cancelFormBtn">Cancel</button>
+          <button class="btn-admin" type="submit">
+            <img src="assets/icons/save-check.svg" class="icon-svg" alt="" /> Save Product
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Script -->
+  <script src="admin.js"></script>
+</body>
+</html>

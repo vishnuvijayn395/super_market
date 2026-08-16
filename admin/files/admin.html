@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kakde Admin Panel</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>🛠 Kakde Supermarket Admin</h1>
+      <p>Add / Edit / Delete products, prices and discounts</p>
+    </div>
+    <div class="admin-account">
+      <span id="adminUser">Checking access…</span>
+      <a href="index.html">Store</a>
+      <button id="adminLogout" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2 id="formTitle">Add Product</h2>
+      <form id="productForm">
+        <input type="hidden" id="productId" />
+        <label>Product Name<input id="name" required /></label>
+        <label>Category<input id="category" type="text" required /></label>
+        <label>Size / Meta<input id="meta" required /></label>
+        <label>Product Image URL<input id="image" type="url" placeholder="https://..." /></label>
+        <label>Or Upload Image<input id="imageFile" type="file" accept="image/*" /></label>
+        <label>Price<input id="price" type="number" min="1" required /></label>
+        <label>MRP<input id="mrp" type="number" min="1" required /></label>
+        <label>Discount %<input id="discount" type="number" min="0" max="90" required /></label>
+        <div class="actions">
+          <button class="btn primary" type="submit">Save Product</button>
+          <button class="btn" type="button" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-head">
+        <h2>All Products</h2>
+        <input type="search" id="searchAdmin" placeholder="Search..." />
+      </div>
+      <div id="tableWrap"></div>
+    </section>
+  </main>
+
+  <script src="categories.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

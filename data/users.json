@@ -1,0 +1,11 @@
+[
+  {
+    "id": "c7e9874e-7950-47f9-ac51-10c9a27a3f70",
+    "name": "Store Administrator",
+    "email": "admin@kakde.com",
+    "role": "admin",
+    "passwordHash": "1b583beec9799cd77033ebb6a5e52f55335ae6aa8cdb1a05a9b0f471cd60e1c8f0e448ecaf67fce863e18aae0c9691bfd4996131ac91766c13d21325ad4b0722",
+    "salt": "e22dd1c8c6ebe90420782b62ceaa7dfd",
+    "createdAt": "2026-08-02T13:24:35.431Z"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "kakde-supermarket",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kakde Supermarket website with customer and admin authentication",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"node server.js\" \"npm:open-browser\"",
+    "open-browser": "node -e \"const { exec } = require('child_process'); setTimeout(() => { exec('start http://localhost:3000/login.html', (err, stdout, stderr) => { if (err) console.error) => {}, {shell:true}); }, 2000);\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

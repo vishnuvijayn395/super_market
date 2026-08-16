@@ -1,0 +1,29 @@
+[
+  {
+    "id": "368b8321-e38b-43a1-9c78-f8c7737abf12",
+    "name": "Store Administrator",
+    "email": "admin@kakde.com",
+    "role": "admin",
+    "passwordHash": "bd2e9500570065af1ad1e60311bb3ae4333ab7cb5bc4358baf1823be5cf9658691c5fa57313706f4814401430505cd20e3685d28d8b94b2a0b286f4f52179d44",
+    "salt": "0c6a7c8d47237ff01d7dd81dec581d57",
+    "createdAt": "2026-07-06T13:42:08.905Z"
+  },
+  {
+    "id": "ad4596d2-9cd5-446e-97b7-075671fc3b1a",
+    "name": "vishnu",
+    "email": "vishnuvijayn395@gmail.com",
+    "role": "user",
+    "passwordHash": "6581403c8eb6d5e5b5e9453714d39a3ccc852c8d7b12f1d9c2727fb0af6ff938f4ee3de000add5c074d18713dd637f4a025560bea465ae22cdd9310c946c4d89",
+    "salt": "b7abc2070620e6a29b4e86a752244dfa",
+    "createdAt": "2026-07-06T13:51:44.233Z"
+  },
+  {
+    "id": "77c6f8cc-634d-4295-89f5-65b3b3795882",
+    "name": "rohit",
+    "email": "kakderohit71@gmail.com",
+    "role": "user",
+    "passwordHash": "c59834dd0499ea7c3bb30557b3d642b49d8305d3514e703b83e02e647262c571743a7138b09c4639d75a14ce4343aa45e3a1bbcbc0864225a2d0d81c4517d6f2",
+    "salt": "ee6b60b96429e1d0d2e8af877da9243c",
+    "createdAt": "2026-07-06T13:54:25.262Z"
+  }
+]

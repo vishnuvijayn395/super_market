@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Account | Kakde Supermarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="user.css">
+</head>
+<body>
+  <header class="account-header"><div class="container account-header__inner">
+    <a class="account-logo" href="index.html">🛒 KAKDE <span>SUPERMARKET</span></a>
+    <div class="account-actions"><a href="categories.html">Shop Categories</a><button id="logoutBtn">Logout</button></div>
+  </div></header>
+  <main class="container account-main">
+    <div class="access-note" id="accessNote" hidden>Admin access is restricted. You are signed in as a customer.</div>
+    <section class="account-welcome">
+      <div><p class="kicker">CUSTOMER ACCOUNT</p><h1>Hello, <span id="customerName">Shopper</span>!</h1><p>Welcome to your Kakde Supermarket account.</p></div>
+      <div class="profile-avatar" id="profileAvatar">K</div>
+    </section>
+    <section class="account-grid">
+      <article class="account-card"><span class="account-card__icon">👤</span><h2>Profile</h2><dl><dt>Name</dt><dd id="profileName">—</dd><dt>Email</dt><dd id="profileEmail">—</dd><dt>Account type</dt><dd><span class="role-pill">Customer</span></dd></dl></article>
+      <article class="account-card"><span class="account-card__icon">🛍️</span><h2>Start shopping</h2><p>Browse all grocery categories and find your everyday essentials.</p><a class="account-button" href="categories.html">Browse products</a></article>
+      <article class="account-card"><span class="account-card__icon">🔥</span><h2>Today's offers</h2><p>Check fresh deals and supermarket specials selected for you.</p><a class="account-button account-button--dark" href="index.html#offers">View offers</a></article>
+    </section>
+  </main>
+  <script src="user.js"></script>
+</body>
+</html>

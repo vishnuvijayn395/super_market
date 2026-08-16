@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register | Kakde Supermarket</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+    <div class="auth-side-banner">
+      <div>
+        <a href="index.html" style="color: rgba(255,255,255,0.8); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem;">
+          <img src="assets/icons/arrow-left.svg" class="icon-svg" style="filter: brightness(0) invert(1);" alt="" /> Back to Supermarket
+        </a>
+        <div style="margin-top: 3rem;">
+          <h1>Create Your Account</h1>
+          <p>Join Kakde Supermarket for quick ordering, express local delivery, and exclusive everyday grocery discounts.</p>
+        </div>
+      </div>
+      
+      <div style="font-size: 0.85rem; opacity: 0.85; display: flex; align-items: center; gap: 0.4rem;">
+        <img src="assets/icons/truck.svg" class="icon-svg" style="filter: brightness(0) invert(1);" alt="" /> Express 30-Min Home Delivery
+      </div>
+    </div>
+
+    <div class="auth-form-panel">
+      <h2 style="font-family: 'Outfit'; font-size: 1.8rem; margin-bottom: 0.5rem;">Customer Registration</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Enter your details to create a free account:</p>
+
+      <div class="auth-alert" id="authAlert"></div>
+
+      <form class="auth-form" id="registerForm">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="e.g. Rahul Sharma" />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="name@example.com" />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required placeholder="8+ chars with uppercase, lowercase & number" />
+        </div>
+
+        <button class="btn-auth" type="submit" id="submitBtn">
+          Create Account
+        </button>
+      </form>
+
+      <div style="margin-top: 1.5rem; font-size: 0.9rem; text-align: center; color: var(--text-muted);">
+        Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 700;">Sign in here</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

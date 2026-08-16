@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login | Kakde Supermarket</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-brand">
+      <a class="back-home" href="index.html">← Back to supermarket</a>
+      <div class="auth-brand-copy"><div class="auth-logo">KAKDE <span>SUPERMARKET</span></div><h1>Welcome back.</h1><p>Sign in to manage your account, continue shopping, or access the store administration tools.</p></div>
+      <div class="auth-points"><span>🔒 Secure session</span><span>🛍️ Customer account</span><span>🛠️ Admin access</span></div>
+    </section>
+    <section class="auth-panel">
+      <div class="auth-card">
+        <h2 id="loginTitle">Customer login</h2><p class="auth-subtitle" id="loginSubtitle">Sign in with your registered customer account.</p>
+        <div class="login-role-tabs" aria-label="Choose login type">
+          <button class="login-role-tab is-active" type="button" data-login-role="user">👤 Customer Login</button>
+          <button class="login-role-tab" type="button" data-login-role="admin">🛠️ Admin Login</button>
+        </div>
+        <div class="auth-message" id="authMessage" role="alert"></div>
+        <form class="auth-form" id="loginForm">
+          <input id="loginRole" name="loginRole" type="hidden" value="user">
+          <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <label for="password">Password</label>
+          <div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password"><button class="password-toggle" type="button" data-toggle-password>Show</button></div>
+          <button class="auth-button" id="loginSubmit" type="submit">Sign in as customer</button>
+        </form>
+        <p class="auth-switch">New customer? <a href="register.html">Create an account</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
